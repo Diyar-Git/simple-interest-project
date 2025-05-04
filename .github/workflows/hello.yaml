@@ -1,0 +1,17 @@
+name: Print Hello
+
+on: # Триггер при коммите или типа того
+  push:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest # раннер на которым запускается job
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3 # клонируем весь код 
+
+      - name: Say Hello
+        run: echo "Hello World!" # RUN = CMD запуск команды которую мы выполняем
+
+  
